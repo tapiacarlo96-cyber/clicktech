@@ -561,7 +561,7 @@ footer {
   font-size: 1.4rem;
   line-height: 1;
   cursor: pointer;
-  color: var(--ink);
+  color: var(--paper);
   padding: 0;
 }
 
