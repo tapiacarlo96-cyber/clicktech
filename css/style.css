@@ -16,7 +16,7 @@
 html { scroll-behavior: smooth; }
 
 body {
-  background: var(--paper);
+  background: var(--ink);
   color: var(--ink);
   font-family: "DM Mono", monospace;
   font-size: 14px;
@@ -131,7 +131,7 @@ nav {
 .hero-banner {
   display: block;
   margin: 0 auto;
-  width: 400px;
+  width: 500px;
   max-width: 100%;
   height: auto;
 }
@@ -267,13 +267,6 @@ section { border-bottom: 1px solid var(--rule); }
   text-shadow: 0 0 16px var(--green-glow);
 }
 
-.contact-tagline {
-  font-size: 0.82rem;
-  color: var(--green);
-  margin-bottom: 3rem;
-  line-height: 1.9;
-  max-width: 340px;
-}
 
 .contact-links { display: flex; flex-direction: column; }
 
@@ -432,5 +425,157 @@ footer {
     width: 100%;
     justify-content: center;
     padding: 0.9rem 1rem;
+  }
+}
+/* ── SERVICIOS ── */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  background: var(--ink);
+}
+
+.service-card {
+  display: flex;
+  transition: transform 0.2s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-3px);
+}
+
+.btn-service {
+  background: transparent;
+  color: var(--green);
+  border-color: var(--paper);
+  width: 100%;
+  justify-content: center;
+  transition: background 0.18s, color 0.18s, transform 0.18s;
+}
+
+.btn-service:hover {
+  background: var(--green);
+  color: var(--ink);
+  border-color: var(--ink);
+  transform: translateY(-2px);
+}
+
+.btn-service:active {
+  transform: translateY(0) scale(0.97);
+}
+
+.btn-modal-cta {
+  background: var(--green);
+  color: var(--ink);
+  border-color: var(--green);
+  width: 100%;
+  justify-content: center;
+  font-weight: 500;
+  transition: background 0.18s, color 0.18s, box-shadow 0.18s, transform 0.18s;
+}
+
+.btn-modal-cta:hover {
+  background: transparent;
+  color: var(--green);
+  box-shadow: 0 0 16px var(--green-glow);
+  transform: translateY(-2px);
+}
+
+/* ── MODAL ── */
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  border: 1px solid var(--rule);
+  border-radius: 12px;
+  padding: 2.5rem;
+  max-width: 560px;
+  width: 90%;
+  background: var(--ink);
+  color: var(--green);
+  font-family: "DM Mono", monospace;
+  animation: modal-in 0.25s ease;
+}
+
+.modal[open] {
+  animation: modal-in 0.25s ease;
+}
+
+.modal.closing {
+  animation: modal-out 0.18s ease forwards;
+}
+
+@keyframes modal-in {
+  from { opacity: 0; transform: translate(-50%, -50%) scale(0.94); }
+  to   { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+}
+
+@keyframes modal-out {
+  from { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+  to   { opacity: 0; transform: translate(-50%, -50%) scale(0.94); }
+}
+
+.modal::backdrop {
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(2px);
+  animation: backdrop-in 0.25s ease;
+}
+
+@keyframes backdrop-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.modal-title {
+  font-family: "Playfair Display", serif;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  color: var(--green);
+}
+
+.modal-desc {
+  font-size: 0.85rem;
+  color: var(--green);
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.modal-media img{
+  border-radius: 20px;
+  width: 100%;
+}
+.modal-media video {
+  width: 100%;
+  border-radius: 20px;
+  display: block;
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  color: var(--ink);
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  .modal {
+    padding: 1.8rem;
   }
 }
