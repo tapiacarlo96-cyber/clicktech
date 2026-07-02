@@ -61,9 +61,8 @@ nav {
   display: inline-block;
   overflow: hidden;
   white-space: nowrap;
-  border-right: 2px solid;
   width: 0;
-  animation: typing 4s steps(400, end) forwards;
+  animation: typing 5s steps(400, end) forwards;
 }
 
 .nav-links {
@@ -152,17 +151,15 @@ nav {
   max-width: 380px;
 }
 
-.hero-desc strong {
-  color: var(--green);
-  font-weight: 50;
+.hero-desc p { color: var(--rule); }
+
+.contact-eyebrow span {
   display: inline-block;
   overflow: hidden;
   white-space: nowrap;
   width: 0;
-  animation: typing 4s steps(400, end) forwards;
+  animation: typing 5s steps(30, end) forwards;
 }
-
-.hero-desc p { color: var(--rule); }
 
 @keyframes typing {
   from { width: 0; }
@@ -338,11 +335,9 @@ footer {
 }
 
 .f-tagline {
-  font-style: italic;
-  font-family: "Playfair Display", serif;
-  font-size: 0.8rem;
+  font-family: Arial, Helvetica, sans-serif;
   color: var(--rule);
-  letter-spacing: 1px;
+  letter-spacing: 0,1px;
 }
 
 .f-green {
@@ -390,9 +385,10 @@ footer {
     max-width: 100%;
   }
 
-  .hero-desc strong {
+  .contact-eyebrow span {
     white-space: normal;
     width: auto;
+    border-right: none;
     animation: none;
   }
 
@@ -430,7 +426,7 @@ footer {
 /* ── SERVICIOS ── */
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 2fr);
   gap: 1.5rem;
   background: var(--ink);
 }
@@ -447,7 +443,8 @@ footer {
 .btn-service {
   background: transparent;
   color: var(--green);
-  border-color: var(--paper);
+  border-color: var(--light);
+  border-radius: 80px;
   width: 100%;
   justify-content: center;
   transition: background 0.18s, color 0.18s, transform 0.18s;
@@ -458,6 +455,7 @@ footer {
   color: var(--ink);
   border-color: var(--ink);
   transform: translateY(-2px);
+  
 }
 
 .btn-service:active {
@@ -563,6 +561,20 @@ footer {
   cursor: pointer;
   color: var(--paper);
   padding: 0;
+}
+
+/* ── BORDES POR MODAL ── */
+#dlg-tv {
+  border: 1px solid var(--green);
+}
+#dlg-web {
+  border: 1px solid var(--green);
+}
+#dlg-invitaciones {
+  border: 1px solid var(--green);
+}
+#dlg-soporte {
+  border: 1px solid var(--green);
 }
 
 @media (max-width: 768px) {
