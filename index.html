@@ -3,133 +3,168 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ClickTech</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<meta name="description" content="ClickTech - Aplicaciones de streaming TV, páginas web, invitaciones digitales y soporte técnico en Salta, Argentina">
+<meta name="theme-color" content="#00ff41">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ClickTech - Tecnología, Diseño y Creatividad">
+<meta property="og:description" content="Invitaciones digitales, aplicaciones únicas y soporte técnico que transforman tu experiencia digital.">
+<meta property="og:image" content="img/click.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ClickTech">
+<meta name="twitter:description" content="Tecnología, diseño y creatividad. Servicios digitales en Salta, Argentina.">
+<title>ClickTech - Tecnología, Diseño y Creatividad</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
-
 </head>
 <body>
 
 <!-- NAV -->
-<nav>
-  <div class="hero-eyebrow"><span>▶ 🖥 B1ENVENI2..</span></div>
+<nav aria-label="Navegación principal">
+  <div class="hero-eyebrow" aria-hidden="true"><span>▶ 🖥 B1ENVENI2..</span></div>
+  <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" type="button">
+    <span></span><span></span><span></span>
+  </button>
   <ul class="nav-links">
-    <li><a href="#contacto">Contacto</a></li>
     <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+    <li>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema claro/oscuro" type="button">
+        <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+    </li>
   </ul>
 </nav>
 
 <!-- HERO -->
 <section id="hero">
   <div class="hero-inner">
-      <img class="hero-banner" src="img/click.png" alt="ClickTech">
-    <div class="hero-sub-row">
-      <div class="hero-desc">
-        <div class="contact-eyebrow"><span>"bienvenido a ClickTech"</span></div>
-        <p>Esta es mi página web. Aquí convivo con la tecnología, el diseño y la creatividad. Invitaciones digitales, aplicaciones únicas y soporte técnico que transforman tu experiencia digital en algo más simple y especial.</p>
-      </div>
+    <img class="hero-banner" src="img/click.png" alt="ClickTech" width="600" height="600">
+    <div class="hero-desc">
+      <div class="contact-eyebrow"><span>"bienvenido a ClickTech"</span></div>
+      <p>Esta es mi página web. Aquí convivo con la tecnología, el diseño y la creatividad. Invitaciones digitales, aplicaciones únicas y soporte técnico que transforman tu experiencia digital en algo más simple y especial.</p>
     </div>
   </div>
 </section>
+
 <!-- SERVICIOS -->
 <section id="servicios">
-  <div class="section-inner services-grid">
+  <div class="section-inner">
     <div class="contact-eyebrow"><span>Descubre esto:</span></div>
-    <div class="service-card reveal">
-      <button class="btn btn-service" data-dialog="dlg-tv">Aplicación TV</button>
-      <dialog class="modal" id="dlg-tv">
-        <button class="modal-close" data-close>&times;</button>
-        <h3 class="modal-title">Aplicación de Streaming TV</h3>
-        <p class="modal-desc">Esta aplicacion ofrece acceso a canales en vivo, peliculas y series.</p>
-        <p>Compartible con:</p>
-        <ul>
-          <li>Celulares Android</li>
-          <li>TV Box</li>
-          <li>Android TV</li>
-          <p>💳 7.OOO/Mes</p>
-        </ul>
-        <div class="modal-media">
-          <img src="img/tv/tvbanner.jpg" alt="Aplicación TV">
-          <video autoplay muted loop width="100%">
-            <source src="video/tv1.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="contact-links">
-        <a href="https://wa.me/+5493875116116?text=Hola%2C%20quiero%20mas%20informacion%20sobre%20la%20aplicacion%20de%20tv" target="_blank" class="btn btn-modal-cta">QUIERO SABER MAS</a>
-        </div>
-      </dialog>
-    </div>
+    <h2 class="section-title">Servicios</h2>
+    <div class="services-grid">
 
-    <div class="service-card reveal">
-      <button class="btn btn-service" data-dialog="dlg-web">Páginas web</button>
-      <dialog class="modal" id="dlg-web">
-        <button class="modal-close" data-close>&times;</button>
-        <h3 class="modal-title">Páginas Web</h3>
-        <p class="modal-desc">Desde páginas simples hasta presencia real en internet.</p>
-        <ul>
-          <li>Landing page</li>
-          <li>Web para negocios</li>
-          <li>Hosting y dominio</li>
-        </ul>
-        <div class="modal-media">
-          <video autoplay muted loop width="100%">
-            <source src="video/pagina2.mp4" type="video/mp4">
-          </video>
-          <video autoplay muted loop width="100%">
-            <source src="video/pagina1.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="contact-links">
-          <a href="https://wa.me/+5493875116116?text=Hola%2C%20quiero%20mas%20informacion%20sobre%20la%20pagina%20web" target="_blank" class="btn btn-modal-cta">QUIERO SABER MAS</a>
-        </div>
-      </dialog>
-    </div>
+      <div class="service-card reveal">
+        <button class="btn btn-service" data-dialog="dlg-tv">
+          <span class="service-icon" aria-hidden="true"></span>
+          <span>Aplicación TV</span>
+        </button>
+        <dialog class="modal" id="dlg-tv">
+          <button class="modal-close" data-close aria-label="Cerrar">&times;</button>
+          <h3 class="modal-title">Aplicación de Streaming TV</h3>
+          <p class="modal-desc">Esta aplicación ofrece acceso a canales en vivo, películas y series.</p>
+          <p>Compatible con:</p>
+          <ul>
+            <li>Celulares Android</li>
+            <li>TV Box</li>
+            <li>Android TV</li>
+          </ul>
+          <p class="modal-price"> 💳 7.000/Mes</p>
+          <div class="modal-media">
+            <img src="img/tv/tvbanner.jpg" alt="Aplicación de streaming TV" loading="lazy" width="500" height="280">
+            <video autoplay muted loop playsinline width="100%">
+              <source src="video/tv1.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="contact-links">
+            <a href="https://wa.me/+5493875116116?text=Hola%2C%20quiero%20mas%20informacion%20sobre%20la%20aplicacion%20de%20tv" target="_blank" rel="noopener noreferrer" class="btn btn-modal-cta">QUIERO SABER MÁS</a>
+          </div>
+        </dialog>
+      </div>
 
-    <div class="service-card reveal">
-      <button class="btn btn-service" data-dialog="dlg-invitaciones">Invitaciones web</button>
-      <dialog class="modal" id="dlg-invitaciones">
-        <button class="modal-close" data-close>&times;</button>
-        <h3 class="modal-title">Invitaciones Digitales</h3>
-        <p class="modal-desc">Invitaciones digitales para compartir desde cualquier lugar.</p>
-        <ul>
-          <li>Casamientos, cumpleaños, XV años</li>
-          <li>Confirmación de asistencia</li>
-          <li>Ubicación por mapa</li>
-          <li>Diseño moderno</li>
-        </ul>
-        <div class="modal-media">
-          <img src="img/invitacion/boda.jpg" alt="Invitaciones web">
-          <img src="img/invitacion/xv.jpg" alt="Invitaciones web">
-        </div>
-        <div class="contact-links">
-          <a href="https://wa.me/+5493875116116?text=Hola%2C%20quiero%20mas%20informacion%20sobre%20la%20invitaciones%20web" target="_blank" class="btn btn-modal-cta">QUIERO SABER MAS</a>
-        </div>
-      </dialog>
-    </div>
+      <div class="service-card reveal">
+        <button class="btn btn-service" data-dialog="dlg-web">
+          <span class="service-icon" aria-hidden="true"></span>
+          <span>Páginas web</span>
+        </button>
+        <dialog class="modal" id="dlg-web">
+          <button class="modal-close" data-close aria-label="Cerrar">&times;</button>
+          <h3 class="modal-title">Páginas Web</h3>
+          <p class="modal-desc">Desde páginas simples hasta presencia real en internet.</p>
+          <ul>
+            <li>Landing page</li>
+            <li>Web para negocios</li>
+            <li>Hosting y dominio</li>
+          </ul>
+          <div class="modal-media">
+            <video autoplay muted loop playsinline width="100%">
+              <source src="video/pagina2.mp4" type="video/mp4">
+            </video>
+            <video autoplay muted loop playsinline width="100%">
+              <source src="video/pagina1.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="contact-links">
+            <a href="https://wa.me/+5493875116116?text=Hola%2C%20quiero%20mas%20informacion%20sobre%20la%20pagina%20web" target="_blank" rel="noopener noreferrer" class="btn btn-modal-cta">QUIERO SABER MÁS</a>
+          </div>
+        </dialog>
+      </div>
 
-    <div class="service-card reveal">
-      <button class="btn btn-service" data-dialog="dlg-soporte">Soporte técnico</button>
-      <dialog class="modal" id="dlg-soporte">
-        <button class="modal-close" data-close>&times;</button>
-        <h3 class="modal-title">Soporte Técnico para PC</h3>
-        <p class="modal-desc">Tu compu vuelve a la vida como nueva.</p>
-        <ul>
-          <li>Instalación de Windows</li>
-          <li>Limpieza de software y hardware</li>
-          <li>Instalación de programas</li>
-          <li>Paquete Office</li>
-        </ul>
-        <div class="modal-media">
-          <img src="img/tecnico/tecnico.jpg" alt="Soporte técnico">
-        </div>
-        <div class="contact-links">
-          <a href="https://wa.me/+5493875116116?text=Hola%20%20servicio%20tecnico" target="_blank" class="btn btn-modal-cta">QUIERO SABER MAS</a>
-        </div>
-      </dialog>
-    </div>
+      <div class="service-card reveal">
+        <button class="btn btn-service" data-dialog="dlg-invitaciones">
+          <span class="service-icon" aria-hidden="true"></span>
+          <span>Invitaciones web</span>
+        </button>
+        <dialog class="modal" id="dlg-invitaciones">
+          <button class="modal-close" data-close aria-label="Cerrar">&times;</button>
+          <h3 class="modal-title">Invitaciones Digitales</h3>
+          <p class="modal-desc">Invitaciones digitales para compartir desde cualquier lugar.</p>
+          <ul>
+            <li>Casamientos, cumpleaños, XV años</li>
+            <li>Confirmación de asistencia</li>
+            <li>Ubicación por mapa</li>
+            <li>Diseño moderno</li>
+          </ul>
+          <div class="modal-media">
+            <img src="img/invitacion/boda.jpg" alt="Invitación de casamiento" loading="lazy" width="500" height="350">
+            <img src="img/invitacion/xv.jpg" alt="Invitación de XV años" loading="lazy" width="500" height="350">
+          </div>
+          <div class="contact-links">
+            <a href="https://wa.me/+5493875116116?text=Hola%2C%20quiero%20mas%20informacion%20sobre%20la%20invitaciones%20web" target="_blank" rel="noopener noreferrer" class="btn btn-modal-cta">QUIERO SABER MÁS</a>
+          </div>
+        </dialog>
+      </div>
 
+      <div class="service-card reveal">
+        <button class="btn btn-service" data-dialog="dlg-soporte">
+          <span class="service-icon" aria-hidden="true"></span>
+          <span>Soporte técnico</span>
+        </button>
+        <dialog class="modal" id="dlg-soporte">
+          <button class="modal-close" data-close aria-label="Cerrar">&times;</button>
+          <h3 class="modal-title">Soporte Técnico para PC</h3>
+          <p class="modal-desc">Tu compu vuelve a la vida como nueva.</p>
+          <ul>
+            <li>Instalación de Windows</li>
+            <li>Limpieza de software y hardware</li>
+            <li>Instalación de programas</li>
+            <li>Paquete Office</li>
+          </ul>
+          <div class="modal-media">
+            <img src="img/tecnico/tecnico.jpg" alt="Servicio de soporte técnico" loading="lazy" width="500" height="350">
+          </div>
+          <div class="contact-links">
+            <a href="https://wa.me/+5493875116116?text=Hola%20%20servicio%20tecnico" target="_blank" rel="noopener noreferrer" class="btn btn-modal-cta">QUIERO SABER MÁS</a>
+          </div>
+        </dialog>
+      </div>
+
+    </div>
   </div>
 </section>
+
 <!-- CONTACTO -->
 <section id="contacto">
   <div class="section-inner">
@@ -138,12 +173,12 @@
         <div class="contact-eyebrow"><span>Escribime sin compromiso</span></div>
         <h2 class="contact-h2">Con<em>tacto</em></h2>
         <div class="contact-links">
-          <a href="https://wa.me/+5493875116116?text=Hola%2C%20quiero%20mas%20informacion" target="_blank" class="contact-item">
-            <img class="icon" src="img/icowp.png" alt="WhatsApp">
+          <a href="https://wa.me/+5493875116116?text=Hola%2C%20quiero%20mas%20informacion" target="_blank" rel="noopener noreferrer" class="contact-item">
+            <img class="icon" src="img/icowp.png" alt="" aria-hidden="true" width="24" height="24" loading="lazy">
             <span><span class="ci-label">WhatsApp: </span><span class="ci-val">+54 9 3875 *** ***</span></span>
           </a>
-          <a href="https://instagram.com/_tapiacarlo.exe" target="_blank" class="contact-item">
-            <img class="icon" src="img/icoig.png" alt="Instagram">
+          <a href="https://instagram.com/_tapiacarlo.exe" target="_blank" rel="noopener noreferrer" class="contact-item">
+            <img class="icon" src="img/icoig.png" alt="" aria-hidden="true" width="24" height="24" loading="lazy">
             <span><span class="ci-label">Instagram: </span><span class="ci-val">@_tapiacarlo.exe</span></span>
           </a>
         </div>
@@ -151,7 +186,7 @@
       <div class="contact-right reveal">
         <p class="contact-cta-title">¿Tenés algo en mente?</p>
         <p class="contact-cta-desc">Desde una página web hasta el mantenimiento de tu computadora. Mandame un mensaje y en el día te respondo con un presupuesto sin compromiso.</p>
-        <a href="https://wa.me/+5493875116116?text=Hola%2C%20quiero%20mas%20informacion" target="_blank" class="btn btn-cta">MAS INFORMACION</a>
+        <a href="https://wa.me/+5493875116116?text=Hola%2C%20quiero%20mas%20informacion" target="_blank" rel="noopener noreferrer" class="btn btn-cta">MÁS INFORMACIÓN</a>
         <p class="contact-cta-note">Sin costo · Sin compromiso · Respuesta en el día</p>
       </div>
     </div>
@@ -160,10 +195,17 @@
 
 <!-- FOOTER -->
 <footer>
-  <img class="hero-logo" src="img/click.png" alt="ClickTech logo">
+  <img class="hero-logo" src="img/click.png" alt="" aria-hidden="true" width="90" height="90" loading="lazy">
   <div class="f-tagline">© 2026 ClickTech - Todos los derechos reservados</div>
-  <div>Salta <span class="f-green">·</span> Argentina</div>
+  <div>Salta <span class="f-green" aria-hidden="true">·</span> Argentina</div>
 </footer>
+
+<!-- WHATSAPP FLOTANTE -->
+<a href="https://wa.me/+5493875116116?text=Hola%2C%20quiero%20mas%20informacion" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Contactar por WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  <span class="whatsapp-pulse" aria-hidden="true"></span>
+</a>
+
 <script src="js/script.js"></script>
 </body>
 </html>
