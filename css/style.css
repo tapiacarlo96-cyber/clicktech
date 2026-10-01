@@ -1,9 +1,9 @@
 :root {
   --bg: #020502;
-  --ink: #00ff41;
-  --green: #00ff41;
-  --border: 2px solid #00ff41;
-  --border-3: 3px solid #00ff41;
+  --ink: #26d953;
+  --green: #129b34eb;
+  --border: 2px solid #31f261;
+  --border-3: 3px solid #00ff40c9;
   --shadow: 5px 5px 0 rgba(0,255,65,.22);
   --shadow-sm: 3px 3px 0 rgba(0,255,65,.22);
   --glow: 0 0 12px rgba(0,255,65,.45), 0 0 32px rgba(0,255,65,.15);
