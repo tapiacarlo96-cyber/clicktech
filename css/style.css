@@ -1,10 +1,10 @@
 :root {
   --bg: #020502;
   --ink: #daf8e1;
-  --green: #45a05feb;
-  --border: 2px solid #f8f9f9;
+  --green: #ffffffeb;
+  --border: 2px solid #004e4e;
   --border-3: 3px solid #d7ecdcc9;
-  --shadow: 5px 5px 0 rgba(0,255,65,.22);
+  --shadow: 5px 5px 0 rgba(0, 255, 64, 0.176);
   --shadow-sm: 3px 3px 0 rgba(0,255,65,.22);
   --glow: 0 0 12px rgba(230, 239, 232, 0.45), 0 0 32px rgba(0,255,65,.15);
   --font-pixel: "Press Start 2P", monospace;
@@ -245,13 +245,13 @@ nav {
 
 .hero-title-pixel {
   font-family: var(--font-pixel);
-  font-size: clamp(1.25rem, 4.6vw, 2rem);
-  line-height: 1.35;
+  font-size: clamp(1rem, 4.6vw, 1rem);
+  line-height: 0.2;
   margin: 1.2rem 0 1rem;
   letter-spacing: 1px;
   text-transform: uppercase;
   color: var(--green);
-  text-shadow: 0 0 10px rgba(0,255,65,.8), 0 0 30px rgba(0,255,65,.4);
+  text-shadow: 0 0 2px rgba(0,255,65,.8), 0 0 15px rgba(0,255,65,.4);
 }
 
 .hero-desc p {
@@ -465,19 +465,7 @@ section { position: relative; z-index: 1; }
   position: relative;
   color: #b8ffc9;
 }
-.modal li::before { content: "▶"; position: absolute; left: 0; color: var(--green); font-size: .9rem; top: .45rem; text-shadow: 0 0 8px rgba(0,255,65,.8); }
-.modal-price {
-  display: inline-block;
-  font-family: var(--font-pixel);
-  font-size: .72rem;
-  padding: .7rem 1rem;
-  margin: 1rem 0;
-  color: #000;
-  background: var(--green);
-  border: var(--border);
-  border-radius: 8px;
-  box-shadow: var(--shadow-sm), var(--glow);
-}
+.modal li::before { content: "▶"; position: absolute; left: 0; color: var(--green); font-size: .9rem; top: .45rem; text-shadow: 0 0 8px rgba(54, 216, 95, 0.8); }
 .modal-media { margin: 1rem 0; display: flex; flex-direction: column; gap: .75rem; }
 .modal-media img, .modal-media video {
   border: var(--border);
